@@ -131,3 +131,29 @@ header {
   font-size: 24px;
   flex-shrink:0;
 }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: transparent !important;
+  color: #44FFA1 !important;
+  border: 2px solid #44FFA1 !important;
+  box-shadow: none !important;
+}
+
+/* Call to Action/Founder section */
+.cta-box {
+  background-color: #24053E !important;
+  padding: 48px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.cta-image {
+  position: relative; 
+  z-index: 2;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
