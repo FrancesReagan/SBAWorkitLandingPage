@@ -113,4 +113,9 @@ header {
   position: absolute;
   bottom:-50px;
   left: -50%
+  width: 200%;
+  height: 100px;
+  background-color: white;
+  border-radius: 0 0 100% 100%;
 }
+
