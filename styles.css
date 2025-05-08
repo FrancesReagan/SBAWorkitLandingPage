@@ -157,3 +157,25 @@ header {
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
+
+/* Classes for background pattern I needed up not connecting/using but if I redo site I may use later */
+.bg-pattern {
+  position: absolute;
+  z-index: 1;
+}
+
+.bg-pattern-1 {
+  top: 100px;
+  left: 0;
+}
+
+.bg-pattern-2 {
+  top: 400px;
+  right: 0;
+}
+
+.bg-pattern-3 {
+  bottom: 0;
+  right: 0;
+  width: 173px;
+}
