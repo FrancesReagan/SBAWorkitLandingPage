@@ -3,4 +3,83 @@
   box-sizing: border-box;
 }
 
+/* Fonts */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');
+}
 
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: 'Manrope'; sans-serif;
+  color: #24053E;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Green underline under "tailored" */
+.green-underline {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: #44FFA1;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+/* Header */
+header {
+  background-color: #24053E !important;
+  padding-top: 32px;
+}
+
+/* Link for "Apply for access" */
+.Apply-for-access-link {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 3px solid #44FFA1;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+.Apply-for-access-link:hover {
+  color: #44FFA1 !important
+}
+
+/* Hero Section w/large text */
+.my-custom-hero-style {
+  position: relative;
+  background-color: #24053E !important;
+  padding-bottom: 250px;
+  margin-bottom: 200px;
+  overflow: hidden;
+}
+
+/* Pseduo element target for style */
+.my-custom-hero-style::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 200%;
+  height: 100px;
+  background-color: white;
+  border-radius: 100% 100% 0 0;
+}
+
+.hero-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+}
+
+/* container for hero phone image */
