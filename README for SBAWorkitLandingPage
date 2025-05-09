@@ -1,0 +1,177 @@
+# Workit Landing Page with Bootstrap
+
+![Workit Landing Page](./assets/images/image-hero.webp)
+
+## Overview
+
+This project is a responsive implementation of the [Frontend Mentor Workit Landing Page Challenge](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu). The challenge required building a modern landing page that adapts to different screen sizes while maintaining visual appeal and functionality.
+
+### The Challenge
+
+The original challenge was to build the Workit landing page according to the provided Figma design. For my implementation, I added an additional constraint: to use Bootstrap's grid system for layouts and Bootstrap utilities and components whenever possible, falling back to custom CSS only when necessary. This approach was chosen to practice integrating Bootstrap with custom designs, to understand the limitations and strengths of the framework, and to develop skills in translating Figma designs into code while using as much Bootstrap as possible.
+
+Users should be able to:
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
+
+## My Approach
+
+### Implementation Strategy
+
+My strategy was to leverage Bootstrap wherever possible while staying true to the original design:
+
+1. **Bootstrap First** - Started with Bootstrap's grid system and utility classes for layout, spacing, and responsiveness
+2. **Component Adaptation** - Used Bootstrap components like buttons and navigation, then customized them to match the design
+3. **Custom CSS Layer** - Added custom CSS only when Bootstrap couldn't achieve the specific design requirements
+4. **Progressive Enhancement** - Built the core structure first, then added decorative elements and refined styling
+
+This approach allowed me to benefit from Bootstrap's responsive foundation while still achieving the unique visual elements required by the design.
+
+### Technologies Used
+
+- **Bootstrap 5.3.0** - For responsive grid layout and utility classes
+- **Custom CSS** - For specific styling requirements and design customizations
+- **Responsive Design** - Mobile-first approach with breakpoints for tablet and desktop views
+- **Custom Fonts** - Integration of Fraunces and Manrope font families
+- **Figma Dev Tools** - Used to extract design specifications and measurements
+- **GreatFrontend Plugin** - Leveraged for design insights and code inspiration
+
+### Key Features and Customizations
+
+1. **Custom Hero Section**
+   - Created a curved bottom edge using pseudo-elements
+   - Positioned the floating phone image with absolute positioning
+   - Implemented custom typography with underlined accents
+
+2. **Responsive Features Section**
+   - Designed numbered circles with custom styling
+   - Maintained consistent spacing and alignment across device sizes
+   - Added subtle background color and curved bottom edge
+
+3. **Call-to-Action Section**
+   - Implemented overlapping image and text box layout
+   - Added shadow effects for depth and visual interest
+   - Positioned decorative background patterns for visual enhancement
+
+4. **Interactive Elements**
+   - Custom styled buttons with color inversion on hover
+   - Interactive navigation links with hover effects
+   - Social media icons with subtle hover states
+
+5. **Typography System**
+   - Implemented variable fonts (Fraunces and Manrope)
+   - Custom font variation settings for headings
+   - Consistent text hierarchy throughout the page
+
+## Challenges and Solutions
+OVERALL--BOOTSTRAP was challenging to use to refactor an existing custom design----it is better suited for sites that don't require much customization and just need standard
+designs. I needed up using alot of Custom CSS to counter its limitations.
+
+### Challenge 1: Curved Section Transitions
+
+**Problem:** Creating smooth, curved transitions between sections while maintaining responsiveness.
+
+**Solution:** I implemented pseudo-elements with border-radius and carefully positioned them to create the curved effect. I used percentage-based values for width to ensure the curves scale properly on different screen sizes.
+
+```css
+.my-custom-hero-style::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 200%;
+  height: 100px;
+  background-color: white;
+  border-radius: 100% 100% 0 0;
+}
+```
+
+**Ongoing Challenge:** I'm still working to perfect the curved background sections. The current implementation works as a first iteration, but I'm researching better techniques to make the curves more precise according to the Figma design. SVG paths might be a more accurate solution than my current CSS approach.
+
+### Challenge 2: Overlapping Elements
+
+**Problem:** Positioning the phone image to overlap multiple sections while maintaining proper z-index and responsiveness.
+
+**Solution:** I used absolute positioning for the hero image container and adjusted its position with media queries for different screen sizes. I tried to carefully manage the z-index values to ensure proper layering of elements.
+
+```css
+.hero-image-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: auto;
+  bottom: -150px;
+  z-index: 3;
+}
+```
+
+### Challenge 3: Custom Styling with Bootstrap
+
+**Problem:** Implementing custom design requirements while leveraging Bootstrap's utility classes.
+
+**Solution:** I used Bootstrap for the responsive grid and layout foundation, then I added alot of custom CSS classes for specific styling needs. I used the !important flag to override Bootstrap defaults when necessary.----may have over used this :).
+
+```css
+.btn-primary {
+  background-color: #44FFA1 !important;
+  color: #24053E !important;
+  border: 2px solid transparent !important;
+  font-weight: 700 !important;
+  padding: 12px 24px !important;
+  border-radius: 0 !important;
+  transition: all 0.3s ease !important;
+}
+```
+
+It was interesting mixing the Bootstrap utilities and custom styling, i.e. using Bootstrap's spacing utilities like `py-4` and positioning classes like `d-flex justify-content-between`and mixed in custom CSS for elements (the number circles and curved section transitions) that aren't available in Bootstrap.
+
+### Challenge 4: Background Pattern Positioning
+
+**Problem:** Properly placing decorative background spirly patterns while ensuring they don't disrupt the layout on smaller screens.
+
+**Solution:** I used the d-none d-md-block Bootstrap classes to hide decorative elements on  mobile-sized layouts, and I used absolute positioning with transform properties to place the spiraly elements as well as I could for larger screens.
+
+```html
+<img src="./assets/images/bg-pattern-1.svg" class="position-absolute start-0 top-50 d-none d-md-block" style="transform: translateY(-50%); width: 140px;" alt="">
+```
+
+## Design Process and Tools
+
+I relied heavily on Figma's developer tools to extract accurate measurements, colors, and typography specifications from the design. The GreatFrontend plugin provided additional insights and inspiration for implementation approaches.
+
+The workflow included:
+1. Studying the design in Figma to understand layout structure and component relationships
+2. Using the Figma dev tools to extract exact values for spacing, sizes, and colors, some code inspiration
+3. Referencing the GreatFrontend plugin for implementation ideas and code inspiration, especially for the curved sections
+4. Building the basic structure with Bootstrap's grid system
+5. Adding custom CSS for specific design elements that couldn't be achieved with Bootstrap alone
+
+## Lessons Learned
+**Design Tool Integration** - Experienced the workflow of translating Figma designs into code using developer tools
+**Bootstrap Integration** - Learning how to blend Bootstrap's responsive framework with custom design requirements
+**Bootstrap Customization** - Learned techniques for overriding Bootstrap defaults without breaking responsiveness
+**Framework Limitations** - Discovered when Bootstrap is sufficient and when custom CSS is necessary for specific design elements
+**Complex Curves in CSS** - Discovered the challenges and limitations of implementing precise curved shapes with CSS
+**CSS Pseudo-elements** - Gained deeper understanding of how to use ::before and ::after for decorative elements
+**Variable Fonts** - Implemented variable fonts with custom settings for more flexible typography
+**Responsive Layout Techniques** - Improved skills in creating layouts that adapt gracefully across device sizes
+**Z-index Management** - Developed better strategies for managing element stacking and overlapping components 
+
+## Future Improvements
+
+- **Refine curved section transitions** - Research and implement more accurate techniques for the curved section backgrounds, potentially using SVG paths instead of CSS border-radius
+- **Complete ornamental background elements** - Finish implementing all decorative background patterns according to the Figma design
+- **Enhance accessibility** with ARIA attributes and keyboard navigation
+- **Add smooth scroll animations** for section transitions
+- **Implement form validation** for the "Apply for access" functionality
+- **Optimize images further** for faster loading times
+
+## Author
+- GitHub -https://github.com/FrancesReagan
+
+## Acknowledgments
+
+- Challenge by [Frontend Mentor](https://www.frontendmentor.io)
+- Abraham E. Tavarez (instructor @Per Scholas) & 2025-RTT-23 Cohort @Per Scholas
+- Fonts: Fraunces by The Fraunces Collective and Manrope by Mikhail Sharanda
