@@ -1,22 +1,4 @@
-# Workit Landing Page with Bootstrap
-
-![Workit Landing Page](./assets/images/image-hero.webp)
-
-## Overview
-
-This project is a responsive implementation of the [Frontend Mentor Workit Landing Page Challenge](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu). The challenge required building a modern landing page that adapts to different screen sizes while maintaining visual appeal and functionality.
-
-### The Challenge
-
-The original challenge was to build the Workit landing page according to the provided Figma design. For my implementation, I added an additional constraint: to use Bootstrap's grid system for layouts and Bootstrap utilities and components whenever possible, falling back to custom CSS only when necessary. This approach was chosen to practice integrating Bootstrap with custom designs, to understand the limitations and strengths of the framework, and to develop skills in translating Figma designs into code while using as much Bootstrap as possible.
-
-Users should be able to:
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
-
-## My Approach
-
-### Implementation Strategy
+My Approach
 
 My strategy was to leverage Bootstrap wherever possible while staying true to the original design:
 
@@ -27,16 +9,16 @@ My strategy was to leverage Bootstrap wherever possible while staying true to th
 
 This approach allowed me to benefit from Bootstrap's responsive foundation while still achieving the unique visual elements required by the design.
 
-### Technologies Used
+Technologies Used
 
-- **Bootstrap 5.3.0** - For responsive grid layout and utility classes
-- **Custom CSS** - For specific styling requirements and design customizations
-- **Responsive Design** - Mobile-first approach with breakpoints for tablet and desktop views
-- **Custom Fonts** - Integration of Fraunces and Manrope font families
-- **Figma Dev Tools** - Used to extract design specifications and measurements
-- **GreatFrontend Plugin** - Leveraged for design insights and code inspiration
+ **Bootstrap 5.3.0** - For responsive grid layout and utility classes
+ **Custom CSS** - For specific styling requirements and design customizations
+ **Responsive Design** - Mobile-first approach with breakpoints for tablet and desktop views
+ **Custom Fonts** - Integration of Fraunces and Manrope font families
+ **Figma Dev Tools** - Used to extract design specifications and measurements
+ **GreatFrontend Plugin** - Leveraged for design insights and code inspiration
 
-### Key Features and Customizations
+Key Features and Customizations
 
 1. **Custom Hero Section**
    - Created a curved bottom edge using pseudo-elements
@@ -63,14 +45,13 @@ This approach allowed me to benefit from Bootstrap's responsive foundation while
    - Custom font variation settings for headings
    - Consistent text hierarchy throughout the page
 
-## Challenges and Solutions
+Challenges and Solutions
 OVERALL--BOOTSTRAP was challenging to use to refactor an existing custom design----it is better suited for sites that don't require much customization and just need standard
 designs. I needed up using alot of Custom CSS to counter its limitations.
 
-### Challenge 1: Curved Section Transitions
+Challenge 1: Curved Section Transitions
 
 **Problem:** Creating smooth, curved transitions between sections while maintaining responsiveness.
-
 **Solution:** I implemented pseudo-elements with border-radius and carefully positioned them to create the curved effect. I used percentage-based values for width to ensure the curves scale properly on different screen sizes.
 
 ```css
@@ -88,7 +69,7 @@ designs. I needed up using alot of Custom CSS to counter its limitations.
 
 **Ongoing Challenge:** I'm still working to perfect the curved background sections. The current implementation works as a first iteration, but I'm researching better techniques to make the curves more precise according to the Figma design. SVG paths might be a more accurate solution than my current CSS approach.
 
-### Challenge 2: Overlapping Elements
+Challenge 2: Overlapping Elements
 
 **Problem:** Positioning the phone image to overlap multiple sections while maintaining proper z-index and responsiveness.
 
@@ -106,7 +87,7 @@ designs. I needed up using alot of Custom CSS to counter its limitations.
 }
 ```
 
-### Challenge 3: Custom Styling with Bootstrap
+Challenge 3: Custom Styling with Bootstrap
 
 **Problem:** Implementing custom design requirements while leveraging Bootstrap's utility classes.
 
@@ -126,7 +107,7 @@ designs. I needed up using alot of Custom CSS to counter its limitations.
 
 It was interesting mixing the Bootstrap utilities and custom styling, i.e. using Bootstrap's spacing utilities like `py-4` and positioning classes like `d-flex justify-content-between`and mixed in custom CSS for elements (the number circles and curved section transitions) that aren't available in Bootstrap.
 
-### Challenge 4: Background Pattern Positioning
+Challenge 4: Background Pattern Positioning
 
 **Problem:** Properly placing decorative background spirly patterns while ensuring they don't disrupt the layout on smaller screens.
 
@@ -136,7 +117,7 @@ It was interesting mixing the Bootstrap utilities and custom styling, i.e. using
 <img src="./assets/images/bg-pattern-1.svg" class="position-absolute start-0 top-50 d-none d-md-block" style="transform: translateY(-50%); width: 140px;" alt="">
 ```
 
-## Design Process and Tools
+Design Process and Tools
 
 I relied heavily on Figma's developer tools to extract accurate measurements, colors, and typography specifications from the design. The GreatFrontend plugin provided additional insights and inspiration for implementation approaches.
 
@@ -147,7 +128,7 @@ The workflow included:
 4. Building the basic structure with Bootstrap's grid system
 5. Adding custom CSS for specific design elements that couldn't be achieved with Bootstrap alone
 
-## Lessons Learned
+Lessons Learned
 **Design Tool Integration** - Experienced the workflow of translating Figma designs into code using developer tools
 **Bootstrap Integration** - Learning how to blend Bootstrap's responsive framework with custom design requirements
 **Bootstrap Customization** - Learned techniques for overriding Bootstrap defaults without breaking responsiveness
@@ -158,19 +139,20 @@ The workflow included:
 **Responsive Layout Techniques** - Improved skills in creating layouts that adapt gracefully across device sizes
 **Z-index Management** - Developed better strategies for managing element stacking and overlapping components 
 
-## Future Improvements
+Future Improvements
 
-- **Refine curved section transitions** - Research and implement more accurate techniques for the curved section backgrounds, potentially using SVG paths instead of CSS border-radius
-- **Complete ornamental background elements** - Finish implementing all decorative background patterns according to the Figma design
-- **Enhance accessibility** with ARIA attributes and keyboard navigation
-- **Add smooth scroll animations** for section transitions
-- **Implement form validation** for the "Apply for access" functionality
-- **Optimize images further** for faster loading times
+- **Refine curved section transitions** 
+Research and implement more accurate techniques for the curved section backgrounds, potentially using SVG paths instead of CSS border-radius
+**Complete ornamental background elements** - Finish implementing all decorative background patterns according to the Figma design
+**Enhance accessibility** with ARIA attributes and keyboard navigation
+**Add smooth scroll animations** for section transitions
+**Implement form validation** for the "Apply for access" functionality
+**Optimize images further** for faster loading times
 
-## Author
+Author
 - GitHub -https://github.com/FrancesReagan
 
-## Acknowledgments
+Acknowledgments
 
 - Challenge by [Frontend Mentor](https://www.frontendmentor.io)
 - Abraham E. Tavarez (instructor @Per Scholas) & 2025-RTT-23 Cohort @Per Scholas
